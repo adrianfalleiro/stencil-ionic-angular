@@ -13,4 +13,6 @@ platformBrowserDynamic()
   .bootstrapModule(AppModule)
   .catch(err => console.log(err));
 
-defineCustomElements(window);
+defineCustomElements(window, {
+  exclude: ['ion-tabs', 'ion-tab'],
+});
